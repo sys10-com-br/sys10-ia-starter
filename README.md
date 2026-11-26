@@ -106,3 +106,7 @@ discovery/                        # README do ciclo, modelo de ata, em-aberto.md
 docs/                             # README, modelo de ficha, modelo de ADR, mudancas.md
 src/                              # seu código
 ```
+
+## Licença
+
+[MIT](LICENSE): use, copie e adapte à vontade.
