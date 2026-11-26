@@ -12,7 +12,9 @@ fica escrito, o processo que se repete vira skill e nada fica pronto sem rodar.
 
 É o que o Claude lê no início de toda sessão: o que é o projeto, os comandos, onde está cada coisa e as
 regras que ele não pode quebrar. Parta do [`CLAUDE.md`](CLAUDE.md) deste repo e preencha os `<...>`.
-Curto e direto: se uma regra precisa de um parágrafo, ela mora em `docs/` e o `CLAUDE.md` aponta.
+Curto e direto: regra de produto que precisa de um parágrafo mora em `docs/`; regra técnica longa sobre um
+tema vira **instrução** em `.claude/rules/<tema>.md`, que o Claude carrega junto com o `CLAUDE.md` (com `paths:`,
+só quando mexe nos arquivos daquele caminho). Este repo traz uma: `desempenho-com-volume.md`.
 
 ### 2. Separe o decidido do que está em discussão
 
@@ -27,6 +29,8 @@ quem decide, nunca suposição.
 
 ### 3. O processo que se repete vira skill
 
+Instrução diz **o que vale sempre**; skill diz **como fazer** um processo, passo a passo, quando ele é chamado.
+
 Fez a mesma coisa três vezes (registrar reunião, escrever ata, implementar tela)? Escreva os passos em
 `.claude/skills/<nome>/SKILL.md`. Este repo traz sete, numeradas na ordem do processo (o número
 mostra onde cada uma entra; o prefixo `sys10-` separa as nossas das que vêm de plugins):
@@ -39,7 +43,7 @@ mostra onde cada uma entra; o prefixo `sys10-` separa as nossas das que vêm de 
 | `/sys10-04-ficha-de-tela` | Tela aprovada: vira ficha em `docs/telas/` com regras, mensagens e aceites |
 | `/sys10-05-implementar-tela` | Ficha pronta: portão → mapa → TDD → rodar no navegador → PR |
 | `/sys10-06-escrever-adr` | Decisão técnica que outras partes vão herdar |
-| `/sys10-07-desempenho-com-volume` | Código que lê, grava ou calcula dado que cresce: desenha para o ×10 e mede |
+| `/sys10-07-desempenho-com-volume` | Dado que cresce: mede com o maior cliente ×1, ×4 e ×10 e põe os números no PR |
 
 ### 4. Verifique rodando, não só com teste
 
@@ -103,6 +107,7 @@ ou senha no `.mcp.json`: use variável de ambiente.
 ```
 CLAUDE.md                         # modelo a preencher
 .claude/settings.json             # plugins (com os MCPs) e permissões
+.claude/rules/                    # instruções por tema (desempenho com volume)
 .claude/skills/                   # as sete skills, numeradas
 .github/pull_request_template.md  # o contrato do PR
 .mcp.json.example                 # Jira/Confluence, opcional

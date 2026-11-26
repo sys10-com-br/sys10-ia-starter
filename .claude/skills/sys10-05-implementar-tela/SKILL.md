@@ -38,8 +38,8 @@ Leia também a tela vizinha já pronta: componente que existe é reaproveitado.
 - Um passo por fluxo, backend antes do front.
 - **Cada critério de aceite vira teste com os mesmos valores** da ficha: vermelho, depois verde.
 - Cor, fonte, botão e ícone saem do design system, nunca de decisão na tela.
-- **Volume:** fluxo sobre dado que cresce segue `/sys10-07-desempenho-com-volume` (medido no ×10, com teste de
-  guarda e números no PR).
+- **Volume:** fluxo sobre dado que cresce segue `.claude/rules/desempenho-com-volume.md` e é medido com
+  `/sys10-07-desempenho-com-volume` (×1, ×4 e ×10, teste de guarda, números no PR).
 - Build, testes e lint verdes antes do passo 4.
 
 ## 4. Rodar e usar no navegador (obrigatório)

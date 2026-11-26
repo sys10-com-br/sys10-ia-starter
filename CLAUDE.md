@@ -50,8 +50,9 @@ Guia para o Claude Code neste repositório. Preencha os `<...>` e apague o que n
 - **Tela segue o protótipo.** Abra o protótipo no mesmo estado e copie a estrutura: ordem, textos literais,
   botões. Diferença vai no PR como "Diferença do design", com o porquê.
 - **Desempenho com volume: desenhe e meça para o maior cliente ×10.** Tudo que lê, calcula, grava ou transfere
-  dado que cresce segue `/sys10-07-desempenho-com-volume`: cálculo no banco, nada da tabela inteira na memória da
-  API, índice para filtro e ordenação, escrita em lote, medição com dado real e teste de guarda; números no PR.
+  dado que cresce segue a instrução `.claude/rules/desempenho-com-volume.md` (cálculo no banco, nada da tabela
+  inteira na memória da API, índice para filtro e ordenação, escrita em lote) e é medido com
+  `/sys10-07-desempenho-com-volume` (dado real ×1, ×4 e ×10, teste de guarda, números no PR).
 - <Regra do seu projeto. Ex.: "Migrations com timestamp até o minuto, nunca número redondo.">
 
 ## Volumes de referência
