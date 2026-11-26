@@ -1,5 +1,5 @@
 ---
-name: ficha-de-tela
+name: sys10-04-ficha-de-tela
 description: Use quando uma tela tem protótipo aprovado e atas com decisões e precisa virar ficha em docs/telas/ para ser implementada; também quando alguém pede "faz a ficha da tela X" ou "atualiza a ficha com a reunião de X".
 ---
 
@@ -22,7 +22,7 @@ coluna "Afeta" cita a tela.
 3. **Leia o protótipo** no estado de cada fluxo (popups, abas, passos). Arquivo grande, por subagente.
    Anote textos literais e os selos de "a validar": o que está atrás de selo não está aprovado.
 4. **Leia as decisões.** Cada regra da ficha cita a fonte (`ata DD/MM · Dnn`, protótipo). Sem fonte, não
-   entra: vira EA (como na `/propagar-ata`).
+   entra: vira EA (como na `/sys10-03-propagar-ata`).
 5. **Fatie em fluxos.** Um fluxo é o que um dev entrega sozinho e quem decide testa sozinho: "Ver …" e
    depois cada ação (criar, editar, excluir…). Para cada fluxo: quem, quando aparece, regras com fonte,
    mensagens literais e aceite em "Dado / quando / então" **com valores concretos**.
@@ -34,4 +34,4 @@ coluna "Afeta" cita a tela.
 
 - Todo fluxo tem aceite com valores concretos; toda regra tem fonte.
 - Nenhum "a definir" sem EA.
-- Próximo passo: `/implementar-tela`.
+- Próximo passo: `/sys10-05-implementar-tela`.

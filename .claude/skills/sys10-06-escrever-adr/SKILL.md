@@ -1,5 +1,5 @@
 ---
-name: escrever-adr
+name: sys10-06-escrever-adr
 description: Use quando uma decisão técnica precisa virar ADR — um candidato do índice de docs/arquitetura/decisoes/ ou uma decisão que nasceu construindo uma tela e que outras partes vão herdar; também quando alguém pede "escreve o ADR de X" ou "isso precisa de ADR?".
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: ata
+name: sys10-02-ata
 description: Use quando uma reunião já tem a transcrição em discovery/ e a ata está "a fazer"; também quando alguém pede "faz a ata", "o que decidimos na reunião de X" ou "lista as decisões da transcrição".
 ---
 
@@ -31,4 +31,4 @@ A pasta da reunião. Sem ela, liste as reuniões com ata "a fazer" em `discovery
 
 - Toda linha de "Decidido" tem minuto, tipo e natureza.
 - Nenhum "a definir" sem `EA novo` ou `EA-NNN`.
-- Próximo passo: `/propagar-ata`.
+- Próximo passo: `/sys10-03-propagar-ata`.

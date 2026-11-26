@@ -1,5 +1,5 @@
 ---
-name: implementar-tela
+name: sys10-05-implementar-tela
 description: Use quando uma tela vai ser implementada, entregue ou revisada — do portão ao PR, rodando a aplicação no navegador e conferindo com o protótipo; também quando alguém pede "implementa a tela X", "a tela está pronta?" ou "o que falta para abrir o PR?".
 ---
 
@@ -23,13 +23,13 @@ Branch `feat/<slug-da-tela>` a partir da `main` atualizada.
 
 ## 2. Mapa da tela
 
-Antes do código, a ficha em `docs/telas/` (como na `/ficha-de-tela`), na própria branch:
+Antes do código, a ficha em `docs/telas/` (como na `/sys10-04-ficha-de-tela`), na própria branch:
 
 - **Para quem usa:** fluxos, regras com fonte, mensagens literais, aceites "Dado / quando / então".
 - **Por dentro ("Notas técnicas"):** componentes → endpoint → handler → tabelas, por fluxo; os estados
   (carregando, vazio, erro, sem permissão); dados e migrations novos; premissas rotuladas `Premissa:`.
 - **Decisão técnica que outras partes vão herdar** (formato de dados, contrato de API, biblioteca base):
-  pare e rode `/escrever-adr` se ela trava o fluxo; senão, aponte o candidato no PR.
+  pare e rode `/sys10-06-escrever-adr` se ela trava o fluxo; senão, aponte o candidato no PR.
 
 Leia também a tela vizinha já pronta: componente que existe é reaproveitado.
 
@@ -38,6 +38,8 @@ Leia também a tela vizinha já pronta: componente que existe é reaproveitado.
 - Um passo por fluxo, backend antes do front.
 - **Cada critério de aceite vira teste com os mesmos valores** da ficha: vermelho, depois verde.
 - Cor, fonte, botão e ícone saem do design system, nunca de decisão na tela.
+- **Volume:** fluxo sobre dado que cresce segue `/sys10-07-desempenho-com-volume` (medido no ×10, com teste de
+  guarda e números no PR).
 - Build, testes e lint verdes antes do passo 4.
 
 ## 4. Rodar e usar no navegador (obrigatório)

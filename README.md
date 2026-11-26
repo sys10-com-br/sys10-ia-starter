@@ -28,22 +28,25 @@ quem decide, nunca suposição.
 ### 3. O processo que se repete vira skill
 
 Fez a mesma coisa três vezes (registrar reunião, escrever ata, implementar tela)? Escreva os passos em
-`.claude/skills/<nome>/SKILL.md`. Este repo traz seis:
+`.claude/skills/<nome>/SKILL.md`. Este repo traz sete, numeradas na ordem do processo (o número
+mostra onde cada uma entra; o prefixo `sys10-` separa as nossas das que vêm de plugins):
 
 | Skill | Quando |
 |---|---|
-| `/registrar-reuniao` | A reunião acabou: salva a transcrição e o link do protótipo |
-| `/ata` | Transcrição salva: extrai as decisões (`D01`, `D02`…) com minuto e fonte |
-| `/propagar-ata` | Ata pronta: pendências viram `EA`, decisões técnicas viram candidato a ADR |
-| `/ficha-de-tela` | Tela aprovada: vira ficha em `docs/telas/` com regras, mensagens e aceites |
-| `/implementar-tela` | Ficha pronta: portão → mapa → TDD → rodar no navegador → PR |
-| `/escrever-adr` | Decisão técnica que outras partes vão herdar |
+| `/sys10-01-registrar-reuniao` | A reunião acabou: salva a transcrição e o link do protótipo |
+| `/sys10-02-ata` | Transcrição salva: extrai as decisões (`D01`, `D02`…) com minuto e fonte |
+| `/sys10-03-propagar-ata` | Ata pronta: pendências viram `EA`, decisões técnicas viram candidato a ADR |
+| `/sys10-04-ficha-de-tela` | Tela aprovada: vira ficha em `docs/telas/` com regras, mensagens e aceites |
+| `/sys10-05-implementar-tela` | Ficha pronta: portão → mapa → TDD → rodar no navegador → PR |
+| `/sys10-06-escrever-adr` | Decisão técnica que outras partes vão herdar |
+| `/sys10-07-desempenho-com-volume` | Código que lê, grava ou calcula dado que cresce: desenha para o ×10 e mede |
 
 ### 4. Verifique rodando, não só com teste
 
 Teste verde não é pronto. O Claude sobe a aplicação e **usa a tela** no navegador (Playwright), ou o app
 no emulador, compara com o protótipo por captura e só então diz que terminou. Se não deu para rodar, ele
-tem que dizer isso com todas as letras.
+tem que dizer isso com todas as letras. Com volume de dados, o mesmo vale: teste com dez linhas não mostra
+lentidão; meça com o maior cliente real ×10 (`/sys10-07-desempenho-com-volume`).
 
 ### 5. Cada erro vira regra, com um teste de guarda
 
@@ -61,7 +64,8 @@ claude
 
 - Na primeira vez, aceite os plugins de `.claude/settings.json` (superpowers, context7, playwright). Se
   não aparecer o convite, instale com `/plugin`.
-- Para usar uma skill, digite `/` e o nome: `/ata`, `/implementar-tela`. O Claude também chama a skill
+- Para usar uma skill, digite `/sys10` e escolha: `/sys10-02-ata`, `/sys10-05-implementar-tela`. O Claude
+  também chama a skill
   sozinho quando o pedido bate com a descrição dela ("faz a ata da reunião de hoje").
 - `/init` gera um rascunho de `CLAUDE.md` lendo o código, se o projeto já existe.
 
@@ -99,7 +103,7 @@ ou senha no `.mcp.json`: use variável de ambiente.
 ```
 CLAUDE.md                         # modelo a preencher
 .claude/settings.json             # plugins (com os MCPs) e permissões
-.claude/skills/                   # as seis skills
+.claude/skills/                   # as sete skills, numeradas
 .github/pull_request_template.md  # o contrato do PR
 .mcp.json.example                 # Jira/Confluence, opcional
 discovery/                        # README do ciclo, modelo de ata, em-aberto.md

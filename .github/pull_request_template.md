@@ -23,6 +23,7 @@ Nenhuma? Escreva "Nenhuma regra de negócio mudou."
 - [ ] Aplicação rodando, fluxo usado no navegador (ou no emulador)
 - [ ] Comparado com o protótipo por captura: desktop, tablet e celular
 - [ ] Capturas anexadas em comentário
+- [ ] Dado que cresce: medido com o maior cliente ×1, ×4 e ×10, números abaixo (ou "não se aplica")
 
 <O que foi usado, com que dados. O que ficou sem teste e por quê.>
 

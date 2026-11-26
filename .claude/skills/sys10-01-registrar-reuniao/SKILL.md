@@ -1,5 +1,5 @@
 ---
-name: registrar-reuniao
+name: sys10-01-registrar-reuniao
 description: Use quando uma reunião com o cliente acabou e precisa entrar no repo (transcrição e link do protótipo mostrado); também quando alguém pede "salva a transcrição da reunião de hoje" ou "registra a reunião de X".
 ---
 
@@ -39,4 +39,4 @@ uma pergunta por vez.
 
 - O cabeçalho tem `fonte:` preenchido; nenhuma senha em claro (`grep -i senha transcricao*.md`).
 - A tabela de `discovery/README.md` tem a linha nova e os links abrem.
-- Próximo passo: `/ata`.
+- Próximo passo: `/sys10-02-ata`.
