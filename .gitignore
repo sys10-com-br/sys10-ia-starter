@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+.mcp.json
+.DS_Store
+node_modules/
+.playwright-mcp/
+.claude/settings.local.json
