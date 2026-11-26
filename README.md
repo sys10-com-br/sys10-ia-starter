@@ -21,7 +21,7 @@ só quando mexe nos arquivos daquele caminho). Este repo traz uma: `desempenho-c
 | Pasta | Etapa | O que tem |
 |---|---|---|
 | `discovery/` | **Em discussão** | Reuniões, transcrições, atas, pendências (`em-aberto.md`). Não é regra |
-| `docs/` | **Decidido** | Fichas de tela, regras, ADRs, mudanças. É o que se implementa |
+| `docs/` | **Decidido** | Fichas de tela, regras, ADRs, mudanças, specs e planos. É o que se implementa |
 | `src/` | **Código** | Só implementa o que está em `docs/` |
 
 O Claude só implementa regra que está em `docs/`. Regra sem fonte vira pendência (`EA-NNN`) e pergunta a
@@ -112,7 +112,7 @@ CLAUDE.md                         # modelo a preencher
 .github/pull_request_template.md  # o contrato do PR
 .mcp.json.example                 # Jira/Confluence, opcional
 discovery/                        # README do ciclo, modelo de ata, em-aberto.md
-docs/                             # README, modelo de ficha, modelo de ADR, mudancas.md
+docs/                             # README, modelo de ficha, modelo de ADR, mudancas.md, specs e planos
 src/                              # seu código
 ```
 

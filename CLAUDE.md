@@ -30,6 +30,8 @@ Guia para o Claude Code neste repositório. Preencha os `<...>` e apague o que n
 
 - Pendências: `discovery/em-aberto.md` (`EA-NNN`).
 - Decisões técnicas: `docs/arquitetura/decisoes/` (`ADR-AAMMDD-HHmm`).
+- Specs e planos do Claude Code: `docs/superpowers/specs/` e `docs/superpowers/plans/` (registros datados, não se
+  editam depois).
 - Decisões mortas que não podem voltar: `docs/projeto/mudancas.md` § "Descontinuado — não usar".
 
 ## Regras de trabalho

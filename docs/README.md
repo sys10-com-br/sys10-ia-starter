@@ -8,6 +8,8 @@ aprovação. O que ainda está em conversa fica em `discovery/`.
 | `telas/` | Uma ficha por tela (modelo: [`telas/_modelo-tela.md`](telas/_modelo-tela.md)). O caminho espelha a rota |
 | `arquitetura/decisoes/` | ADRs (modelo: [`_modelo-adr.md`](arquitetura/decisoes/_modelo-adr.md)) |
 | `projeto/mudancas.md` | Toda mudança em algo já aprovado (`MU-NNN`) e o que foi descontinuado |
+| `superpowers/specs/` | Specs do Claude Code: o desenho de uma mudança (skill `superpowers:brainstorming`). Registro datado |
+| `superpowers/plans/` | Planos de implementação, tarefa a tarefa (skill `superpowers:writing-plans`). Registro datado |
 
 ## IDs
 

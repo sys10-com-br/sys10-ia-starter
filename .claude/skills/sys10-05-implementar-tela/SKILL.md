@@ -35,7 +35,8 @@ Leia também a tela vizinha já pronta: componente que existe é reaproveitado.
 
 ## 3. Implementar com TDD
 
-- Um passo por fluxo, backend antes do front.
+- Um passo por fluxo, backend antes do front. Tela com mais de dois fluxos ganha um plano em
+  `docs/superpowers/plans/` (`superpowers:writing-plans`).
 - **Cada critério de aceite vira teste com os mesmos valores** da ficha: vermelho, depois verde.
 - Cor, fonte, botão e ícone saem do design system, nunca de decisão na tela.
 - **Volume:** fluxo sobre dado que cresce segue `.claude/rules/desempenho-com-volume.md` e é medido com
