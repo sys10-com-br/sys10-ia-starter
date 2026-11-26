@@ -76,8 +76,11 @@ Claude Code oferece instalar os plugins:
 | `playwright` | **MCP do Playwright**: abrir, usar e capturar a aplicação no navegador (passo 4) |
 | `context7` | **MCP do Context7**: documentação atual das bibliotecas, em vez da memória do modelo |
 
-As ferramentas dos dois MCPs já estão liberadas em `permissions.allow`, para o Claude não pedir
-confirmação a cada clique no navegador.
+Em `permissions.allow` ficam liberados o Context7 (só lê documentação) e, no Playwright, o que lê e
+interage com a página (captura, clique, digitação, redimensionar). **Navegar para uma URL, executar
+JavaScript e enviar arquivo continuam pedindo confirmação**: uma página maliciosa pode tentar instruir o
+Claude a mandar dados para fora (prompt injection). Quem quiser liberar mais, faz no próprio
+`.claude/settings.local.json`, que não vai para o Git.
 
 **Jira/Confluence (opcional):** copie [`.mcp.json.example`](.mcp.json.example) para `.mcp.json` na raiz
 (é onde o Claude Code lê MCP de projeto). Ele pede login na Atlassian na primeira vez. Nunca coloque token
