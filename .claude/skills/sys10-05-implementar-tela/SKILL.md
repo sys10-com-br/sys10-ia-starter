@@ -5,6 +5,8 @@ description: Use quando uma tela vai ser implementada, entregue ou revisada — 
 
 # Implementar uma tela
 
+Leia primeiro `.claude/skills/_comum/regras.md`.
+
 **Da tela aprovada até o PR.** Teste verde não é tela pronta: a tela está pronta quando foi **usada no
 navegador** e bate com o protótipo em todas as larguras.
 
@@ -70,6 +72,11 @@ o PR não está pronto:
 5. Regras mudadas (antes → depois, com fonte), com a ficha e o `MU-NNN` atualizados no mesmo PR.
 6. Diferenças do design, com o porquê.
 7. Link do card.
+
+## 6. Revisão
+
+Quem revisa roda a [`checklist.md`](checklist.md) inteira, com o PR, a ficha e o protótipo. Com CRITICAL ou HIGH, o PR
+volta ao autor.
 
 ## Como conferir
 

@@ -5,6 +5,8 @@ description: Use para medir o desempenho de código que lê, calcula, grava ou t
 
 # Medir desempenho com volume
 
+Leia primeiro `.claude/skills/_comum/regras.md`.
+
 As regras de desenho (o tamanho dos dados e como escrever o código para ele) estão na instrução
 `.claude/rules/desempenho-com-volume.md`. Esta skill é o passo a passo de **medir** com dado real, **comparar**
 opções e **mostrar os números** no PR.

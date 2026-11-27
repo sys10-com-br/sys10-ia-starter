@@ -5,6 +5,8 @@ description: Use quando uma tela tem protótipo aprovado e atas com decisões e 
 
 # Ficha de tela
 
+Leia primeiro `.claude/skills/_comum/regras.md`.
+
 **É aqui que a tela vira regra.** Uma ficha por tela, em `docs/telas/`, a partir das atas e do protótipo.
 Entra por PR; **o merge de quem decide é a aprovação**. Modelo: `docs/telas/_modelo-tela.md`.
 

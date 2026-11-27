@@ -5,6 +5,8 @@ description: Use depois que a ata está escrita e as pendências e decisões té
 
 # Propagar a ata
 
+Leia primeiro `.claude/skills/_comum/regras.md`.
+
 Leva da ata o que **não é de uma tela só**: pendências, regras transversais, vocabulário e decisões
 técnicas. O que é de uma tela fica na ata e entra na ficha pela `/sys10-04-ficha-de-tela`. A mudança vai direto para
 `docs/` numa branch: **o merge de quem decide é a aprovação**.

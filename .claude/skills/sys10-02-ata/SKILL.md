@@ -5,6 +5,8 @@ description: Use quando uma reunião já tem a transcrição em discovery/ e a a
 
 # Escrever a ata
 
+Leia primeiro `.claude/skills/_comum/regras.md`.
+
 Modelo: `discovery/_modelos/ata.md`.
 
 ## Entrada

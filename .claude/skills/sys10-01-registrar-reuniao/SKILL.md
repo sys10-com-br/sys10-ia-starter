@@ -5,6 +5,8 @@ description: Use quando uma reunião com o cliente acabou e precisa entrar no re
 
 # Registrar a reunião
 
+Leia primeiro `.claude/skills/_comum/regras.md`.
+
 ## Entrada
 
 A data (ou "hoje"), o nome da reunião e, se houve, o link do protótipo mostrado. Pergunte o que faltar,

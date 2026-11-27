@@ -5,6 +5,8 @@ description: Use quando uma decisão técnica precisa virar ADR — um candidato
 
 # Escrever um ADR
 
+Leia primeiro `.claude/skills/_comum/regras.md`.
+
 **Decisão técnica relevante vira ADR, investigada antes de escrita.** O merge do PR é a aprovação.
 Modelo: `docs/arquitetura/decisoes/_modelo-adr.md` (MADR).
 
