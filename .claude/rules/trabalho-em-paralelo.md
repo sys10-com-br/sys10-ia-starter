@@ -9,8 +9,9 @@ Vale quando várias pessoas, ou várias sessões do Claude, trabalham no mesmo r
 - **ID que nasce no código é gerado na hora, nunca "o próximo da sequência":** ADR por data e hora UTC
   (`date -u +%y%m%d-%H%M`), migration por timestamp real, GUID por `uuidgen`. Duas branches escolhem o mesmo
   "próximo" e o merge ou o deploy quebra.
-- **O andamento sai do código e do Git**, não do quadro de tarefas: o que está na `main`, o que está em branch
-  aberta, o que tem PR. O card pode estar desatualizado; quando divergir, diga.
+- **Card e código andam juntos.** O card é atualizado em cada entrega (link do PR, estado). Ao relatar o
+  andamento, confira o card com o código e o Git (o que está na `main`, em branch aberta, com PR); quando
+  divergirem, diga e corrija o card, sem assumir um lado.
 - **Merge frequente, PR pequeno:** branch que vive dias acumula conflito com todas as outras.
 - **Arquivo muito disputado** (`CLAUDE.md`, rotas, registro de dependências): mude pouco por PR e faça o merge
   rápido.
