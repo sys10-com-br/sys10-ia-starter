@@ -15,4 +15,7 @@ Vale para toda mudança.
   produção.
 - **Não deu para rodar** (sem banco, sem login, sem emulador)? Diga isso com todas as letras e o que ficou sem
   teste. Nunca diga "pronto" só com os testes automatizados.
+- **Build de produção num comando sozinho, e conferido antes de publicar.** Nunca gere o artefato de produção (APK,
+  pacote, imagem) no mesmo comando de um build de teste com configuração própria (URL de API, chave): a configuração
+  vaza para o de produção. Antes de publicar, confira dentro do artefato a URL, a versão e a assinatura.
 - **Evidência no PR:** o que foi usado, com que dados, e as capturas.

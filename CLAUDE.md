@@ -63,6 +63,7 @@ O Claude carrega estes arquivos junto com este. Os que têm `paths:` só entram 
 | `banco-e-migrations.md` | No backend: migrations, IDs, transação |
 | `trabalho-em-paralelo.md` | Sempre: worktrees, IDs gerados na hora, andamento pelo Git |
 | `autonomia.md` | Sempre: plano aprovado vai até o fim; quando parar |
+| `discovery.md` | Em `discovery/` e `docs/`: 1:1 nunca é fonte, vocabulário pelo glossário, histórico |
 | `desempenho-com-volume.md` | No código que mexe com dado que cresce (medir com `/sys10-07-desempenho-com-volume`) |
 
 ## Como as regras evoluem

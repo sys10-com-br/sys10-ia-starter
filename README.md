@@ -17,8 +17,8 @@ fica escrito, o processo que se repete vira skill e nada fica pronto sem rodar.
 regras que ele não pode quebrar. Parta do [`CLAUDE.md`](CLAUDE.md) deste repo e preencha os `<...>`.
 Curto e direto: regra de produto que precisa de um parágrafo mora em `docs/`; regra técnica longa sobre um
 tema vira **instrução** em `.claude/rules/<tema>.md`, que o Claude carrega junto com o `CLAUDE.md` (com `paths:`,
-só quando mexe nos arquivos daquele caminho). Este repo traz nove: verificação, git e PR, segurança,
-autonomia, trabalho em paralelo, código, telas, banco e migrations, e desempenho com volume. Ajuste os
+só quando mexe nos arquivos daquele caminho). Este repo traz dez: verificação, git e PR, segurança,
+autonomia, trabalho em paralelo, código, telas, banco e migrations, discovery, e desempenho com volume. Ajuste os
 `paths:` e os `<...>` ao seu projeto.
 
 ### 2. Separe o decidido do que está em discussão
@@ -141,7 +141,7 @@ ou senha no `.mcp.json`: use variável de ambiente.
 ```
 CLAUDE.md                         # modelo a preencher
 .claude/settings.json             # plugins (com os MCPs) e permissões
-.claude/rules/                    # instruções por tema (verificação, git, segurança, código, telas, banco, desempenho)
+.claude/rules/                    # instruções por tema (verificação, git, segurança, código, telas, banco, discovery…)
 .claude/skills/                   # as oito skills, numeradas, e _comum/regras.md (vale para todas)
 .github/pull_request_template.md  # o contrato do PR
 .mcp.json.example                 # Jira/Confluence, opcional
