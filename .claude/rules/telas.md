@@ -10,6 +10,9 @@ Ajuste o `paths:` acima para a pasta do front (web, mobile) do seu projeto.
 - **O protótipo aprovado é o gabarito.** Antes de codar, abra a tela do protótipo no mesmo estado (cada popup,
   aba e passo) e copie a estrutura: ordem dos blocos, textos literais, botões, ícones, colunas. Nunca implemente
   "pelo espírito" do design nem por um resumo em texto.
+- **Protótipo errado se corrige, não se contorna.** Se copiar o protótipo à risca quebra a tela (ex.: larguras fixas
+  de coluna que sobrepõem o conteúdo), faça o certo e registre a exceção aqui, com a data e quem decidiu, para a
+  próxima tela não repetir o erro nem a "correção" virar desvio calado.
 - **Design system é obrigatório:** cor, fonte, botão, ícone, status e formato de valor saem dele (token e
   componente), nunca de uma decisão na tela.
 - **O mesmo elemento usa o mesmo componente** em todas as telas. Mudou um, padronize os outros.
