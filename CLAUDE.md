@@ -38,24 +38,26 @@ Guia para o Claude Code neste repositório. Preencha os `<...>` e apague o que n
 
 - **Só implemente regra que está em `docs/`.** Regra sem fonte (ata, protótipo, doc) vira `EA-NNN` em
   `discovery/em-aberto.md` e pergunta a <quem decide: PO, cliente>. Nunca suponha.
-- **Teste rodando antes de dizer pronto.** Teste automatizado não basta: suba a aplicação e use a tela no
-  navegador (Playwright) ou o app no emulador, no fluxo que mudou, e compare com o protótipo por captura.
-  Se não der para rodar, diga isso com todas as letras e o que ficou sem teste.
-- **Nada direto na `main`.** Toda mudança entra por branch `<tipo>/<assunto-em-kebab-case>` e PR. Commit
-  `<tipo>: <descrição>` (`feat`, `fix`, `docs`, `refactor`, `test`, `chore`). Pergunte o destino antes de
-  abrir o PR.
 - **Mudou regra, atualiza o doc no mesmo PR.** O código que cria, altera ou remove uma regra de negócio
   atualiza a ficha, os critérios de aceite e registra um `MU-NNN` em `docs/projeto/mudancas.md`. O PR lista
   as regras mudadas (antes → depois, com a fonte).
 - **ID de ADR pela data e hora UTC:** `ADR-AAMMDD-HHmm`, gerado com `date -u +%y%m%d-%H%M` na hora em que o
   ADR nasce. Número sequencial colide entre branches em paralelo.
-- **Tela segue o protótipo.** Abra o protótipo no mesmo estado e copie a estrutura: ordem, textos literais,
-  botões. Diferença vai no PR como "Diferença do design", com o porquê.
-- **Desempenho com volume: desenhe e meça para o maior cliente ×10.** Tudo que lê, calcula, grava ou transfere
-  dado que cresce segue a instrução `.claude/rules/desempenho-com-volume.md` (cálculo no banco, nada da tabela
-  inteira na memória da API, índice para filtro e ordenação, escrita em lote) e é medido com
-  `/sys10-07-desempenho-com-volume` (dado real ×1, ×4 e ×10, teste de guarda, números no PR).
-- <Regra do seu projeto. Ex.: "Migrations com timestamp até o minuto, nunca número redondo.">
+- <Regra do seu projeto.>
+
+## Instruções por tema (`.claude/rules/`)
+
+O Claude carrega estes arquivos junto com este. Os que têm `paths:` só entram quando ele mexe naqueles arquivos.
+
+| Arquivo | Quando vale |
+|---|---|
+| `verificacao.md` | Sempre: pronto é rodando, não só teste verde |
+| `git-e-pr.md` | Sempre: branch, commit, PR e "deixe tudo sincronizado" |
+| `seguranca.md` | Sempre: segredos, dado pessoal, ação externa com confirmação |
+| `codigo.md` | No código: formatação, nomes, erros, validação |
+| `telas.md` | No front: protótipo, design system, estados |
+| `banco-e-migrations.md` | No backend: migrations, IDs, transação |
+| `desempenho-com-volume.md` | No código que mexe com dado que cresce (medir com `/sys10-07-desempenho-com-volume`) |
 
 ## Volumes de referência
 

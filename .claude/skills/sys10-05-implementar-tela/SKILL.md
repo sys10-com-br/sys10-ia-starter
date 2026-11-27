@@ -8,7 +8,8 @@ description: Use quando uma tela vai ser implementada, entregue ou revisada — 
 **Da tela aprovada até o PR.** Teste verde não é tela pronta: a tela está pronta quando foi **usada no
 navegador** e bate com o protótipo em todas as larguras.
 
-Leia primeiro o `CLAUDE.md` (regras e invariantes valem acima desta skill) e a ficha da tela em
+Leia primeiro o `CLAUDE.md` e as instruções de `.claude/rules/` (`verificacao.md`, `telas.md`, `codigo.md`;
+valem acima desta skill) e a ficha da tela em
 `docs/telas/`, se já existir.
 
 ## 1. Portão

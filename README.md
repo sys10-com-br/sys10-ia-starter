@@ -14,7 +14,8 @@ fica escrito, o processo que se repete vira skill e nada fica pronto sem rodar.
 regras que ele não pode quebrar. Parta do [`CLAUDE.md`](CLAUDE.md) deste repo e preencha os `<...>`.
 Curto e direto: regra de produto que precisa de um parágrafo mora em `docs/`; regra técnica longa sobre um
 tema vira **instrução** em `.claude/rules/<tema>.md`, que o Claude carrega junto com o `CLAUDE.md` (com `paths:`,
-só quando mexe nos arquivos daquele caminho). Este repo traz uma: `desempenho-com-volume.md`.
+só quando mexe nos arquivos daquele caminho). Este repo traz sete: verificação, git e PR, segurança, código,
+telas, banco e migrations, e desempenho com volume. Ajuste os `paths:` e os `<...>` ao seu projeto.
 
 ### 2. Separe o decidido do que está em discussão
 
@@ -61,16 +62,19 @@ próxima sessão.
 ## Abrir no Claude Code
 
 ```bash
-# instale: https://docs.claude.com/claude-code
+# instale: https://code.claude.com/docs
 cd meu-projeto
 claude
 ```
 
+- **Use o modo auto:** `Shift+Tab` até aparecer "auto mode", ou `claude --permission-mode auto`. Ele segue
+  sozinho no que é seguro e pergunta no que é arriscado. Para abrir sempre nele, ponha
+  `"permissions": { "defaultMode": "auto" }` no seu `~/.claude/settings.json` (no `.claude/settings.json` do
+  projeto essa chave não vale para o modo auto).
 - Na primeira vez, aceite os plugins de `.claude/settings.json` (superpowers, context7, playwright). Se
   não aparecer o convite, instale com `/plugin`.
 - Para usar uma skill, digite `/sys10` e escolha: `/sys10-02-ata`, `/sys10-05-implementar-tela`. O Claude
-  também chama a skill
-  sozinho quando o pedido bate com a descrição dela ("faz a ata da reunião de hoje").
+  também chama a skill sozinho quando o pedido bate com a descrição dela ("faz a ata da reunião de hoje").
 - `/init` gera um rascunho de `CLAUDE.md` lendo o código, se o projeto já existe.
 
 ## Plugins e MCPs
@@ -107,7 +111,7 @@ ou senha no `.mcp.json`: use variável de ambiente.
 ```
 CLAUDE.md                         # modelo a preencher
 .claude/settings.json             # plugins (com os MCPs) e permissões
-.claude/rules/                    # instruções por tema (desempenho com volume)
+.claude/rules/                    # instruções por tema (verificação, git, segurança, código, telas, banco, desempenho)
 .claude/skills/                   # as sete skills, numeradas
 .github/pull_request_template.md  # o contrato do PR
 .mcp.json.example                 # Jira/Confluence, opcional
