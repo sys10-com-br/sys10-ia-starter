@@ -1,4 +1,4 @@
-# Starter kit: trabalhar com IA (Claude Code)
+# Kit para trabalhar com IA (Claude Code)
 
 Modelo de repositório para começar um projeto com o Claude Code do jeito que funciona: o que foi decidido
 fica escrito, o processo que se repete vira skill e nada fica pronto sem rodar.
