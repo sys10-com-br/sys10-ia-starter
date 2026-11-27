@@ -17,8 +17,9 @@ fica escrito, o processo que se repete vira skill e nada fica pronto sem rodar.
 regras que ele não pode quebrar. Parta do [`CLAUDE.md`](CLAUDE.md) deste repo e preencha os `<...>`.
 Curto e direto: regra de produto que precisa de um parágrafo mora em `docs/`; regra técnica longa sobre um
 tema vira **instrução** em `.claude/rules/<tema>.md`, que o Claude carrega junto com o `CLAUDE.md` (com `paths:`,
-só quando mexe nos arquivos daquele caminho). Este repo traz sete: verificação, git e PR, segurança, código,
-telas, banco e migrations, e desempenho com volume. Ajuste os `paths:` e os `<...>` ao seu projeto.
+só quando mexe nos arquivos daquele caminho). Este repo traz nove: verificação, git e PR, segurança,
+autonomia, trabalho em paralelo, código, telas, banco e migrations, e desempenho com volume. Ajuste os
+`paths:` e os `<...>` ao seu projeto.
 
 ### 2. Separe o decidido do que está em discussão
 
@@ -36,7 +37,7 @@ quem decide, nunca suposição.
 Instrução diz **o que vale sempre**; skill diz **como fazer** um processo, passo a passo, quando ele é chamado.
 
 Fez a mesma coisa três vezes (registrar reunião, escrever ata, implementar tela)? Escreva os passos em
-`.claude/skills/<nome>/SKILL.md`. Este repo traz sete, numeradas na ordem do processo (o número
+`.claude/skills/<nome>/SKILL.md`. Este repo traz oito, numeradas na ordem do processo (o número
 mostra onde cada uma entra; o prefixo `sys10-` separa as nossas das que vêm de plugins):
 
 | Skill | Quando |
@@ -48,6 +49,7 @@ mostra onde cada uma entra; o prefixo `sys10-` separa as nossas das que vêm de 
 | `/sys10-05-implementar-tela` | Ficha pronta: portão → mapa → TDD → rodar no navegador → PR |
 | `/sys10-06-escrever-adr` | Decisão técnica que outras partes vão herdar |
 | `/sys10-07-desempenho-com-volume` | Dado que cresce: mede com o maior cliente ×1, ×4 e ×10 e põe os números no PR |
+| `/sys10-08-nova-regra` | Erro corrigido ou "nunca mais": vira regra no lugar certo, com guarda |
 
 ### 4. Verifique rodando, não só com teste
 
@@ -58,9 +60,11 @@ lentidão; meça com o maior cliente real ×10 (`/sys10-07-desempenho-com-volume
 
 ### 5. Cada erro vira regra, com um teste de guarda
 
-O Claude errou? Não corrija só o código: escreva a regra no `CLAUDE.md` (com o porquê e a data) e, quando
-der, um teste que quebra se o erro voltar. É assim que o projeto aprende e o erro não se repete na
-próxima sessão.
+O Claude errou? Não corrija só o código: rode `/sys10-08-nova-regra`. A regra vai para o lugar certo (`CLAUDE.md`
+ou `.claude/rules/`), com o porquê, a data e quem pediu, e ganha uma guarda quando der: um teste, um lint ou um
+hook que quebra se o erro voltar. Lição que ficou só na memória de alguém sobe para o projeto por PR. É assim que o
+projeto aprende e o erro não se repete na próxima sessão de ninguém (detalhes: "Como as regras evoluem" no
+`CLAUDE.md`).
 
 ## Não é dev? Comece pelo Claude desktop
 
@@ -112,6 +116,7 @@ Claude Code oferece instalar os plugins:
 | `superpowers` | Skills de processo: brainstorming, plano, TDD, depuração, verificação antes de dizer pronto |
 | `playwright` | **MCP do Playwright**: abrir, usar e capturar a aplicação no navegador (passo 4) |
 | `context7` | **MCP do Context7**: documentação atual das bibliotecas, em vez da memória do modelo |
+| `claude-md-management` | `/revise-claude-md` (leva o que a sessão ensinou para o `CLAUDE.md`) e a auditoria do `CLAUDE.md` |
 
 Em `permissions.allow` ficam liberadas só as ferramentas que **leem** a página (snapshot, captura,
 console, redimensionar, esperar). Navegar, clicar, digitar, executar JavaScript e consultar o Context7
@@ -137,11 +142,15 @@ ou senha no `.mcp.json`: use variável de ambiente.
 CLAUDE.md                         # modelo a preencher
 .claude/settings.json             # plugins (com os MCPs) e permissões
 .claude/rules/                    # instruções por tema (verificação, git, segurança, código, telas, banco, desempenho)
-.claude/skills/                   # as sete skills, numeradas
+.claude/skills/                   # as oito skills, numeradas, e _comum/regras.md (vale para todas)
 .github/pull_request_template.md  # o contrato do PR
 .mcp.json.example                 # Jira/Confluence, opcional
+.editorconfig                     # formatação comum a qualquer editor
 discovery/                        # README do ciclo, modelo de ata, em-aberto.md
-docs/                             # README, modelo de ficha, modelo de ADR, mudancas.md, specs e planos
+docs/projeto/                     # visão geral, mudanças, riscos
+docs/produto/                     # glossário, regras transversais, parâmetros, estados, RNF
+docs/telas/, docs/arquitetura/    # modelo de ficha de tela e de ADR
+docs/superpowers/                 # specs e planos
 src/                              # seu código
 ```
 
