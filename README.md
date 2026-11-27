@@ -3,6 +3,9 @@
 Modelo de repositório para começar um projeto com o Claude Code do jeito que funciona: o que foi decidido
 fica escrito, o processo que se repete vira skill e nada fica pronto sem rodar.
 
+> Revisado em 27/11/2026. As ferramentas mudam a cada um ou dois meses: confira a data e a última
+> [release](../../releases/latest).
+
 **Para usar:** clique em **Use this template** (ou baixe o zip da
 [última release](../../releases/latest)), copie as pastas para o seu projeto e preencha o `CLAUDE.md`.
 
@@ -58,6 +61,28 @@ lentidão; meça com o maior cliente real ×10 (`/sys10-07-desempenho-com-volume
 O Claude errou? Não corrija só o código: escreva a regra no `CLAUDE.md` (com o porquê e a data) e, quando
 der, um teste que quebra se o erro voltar. É assim que o projeto aprende e o erro não se repete na
 próxima sessão.
+
+## Não é dev? Comece pelo Claude desktop
+
+O kit é para projetos de código, mas a ideia vale para qualquer trabalho. Sem Git nem terminal:
+
+1. **Crie um projeto** no Claude e escreva nas instruções dele o que escreveria no `CLAUDE.md`: o que é o
+   trabalho, onde estão as coisas, as regras e o que nunca pode acontecer.
+2. **Conecte as ferramentas** que você usa (Jira, Google Drive, Gmail, Agenda…) nas configurações de
+   conectores. Algumas, como o WhatsApp, exigem instalar algo na sua máquina: peça ajuda a quem já fez.
+3. **O que você repete vira skill:** escreva os passos uma vez, salve como skill e chame com `/`.
+4. **Dado de cliente:** siga a receita de [`seguranca.md`](.claude/rules/seguranca.md) (amostra fictícia, a IA
+   gera um programa, o dado real passa só pelo programa).
+
+## Primeiros prompts
+
+- "Vou fazer <tarefa>, que me toma <X horas> por <semana>. Como você pode me ajudar? Pergunte o que precisar."
+- "Leia <pasta/arquivo> e me diga o que falta para um `CLAUDE.md` deste projeto."
+- "Faço isto toda semana: <passos>. Transforme em uma skill."
+
+**Contexto é por conversa:** cada conversa tem a própria memória, que enche. Assunto novo, conversa nova; o que
+precisa valer sempre vai para o `CLAUDE.md`, para as instruções do projeto ou para uma skill. Tarefa grande, peça
+para dividir em subagentes: cada um começa do zero e faz só a sua parte.
 
 ## Abrir no Claude Code
 
@@ -119,6 +144,12 @@ discovery/                        # README do ciclo, modelo de ata, em-aberto.md
 docs/                             # README, modelo de ficha, modelo de ADR, mudancas.md, specs e planos
 src/                              # seu código
 ```
+
+## Dúvidas e ajuda
+
+Trave em alguma coisa (conectar uma ferramenta, montar uma skill, saber se um dado pode ir para a IA)? Fale com
+<canal ou pessoa de referência do time>. Monte o primeiro caso de uso junto com alguém que já usa: é o jeito mais
+rápido de aprender.
 
 ## Licença
 
